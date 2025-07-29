@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm64 6.12.30 Kernel Configuration
+# Linux/arm64 6.12.38 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="Android (11368308, +pgo, +bolt, +lto, +mlgo, based on r510928) clang version 18.0.0 (https://android.googlesource.com/toolchain/llvm-project 477610d4d0d988e69dbc3fae4fe86bff3f07f2b5)"
 CONFIG_GCC_VERSION=0
@@ -660,12 +660,10 @@ CONFIG_KVM_GENERIC_HARDWARE_ENABLING=y
 CONFIG_KVM_GENERIC_MMU_NOTIFIER=y
 CONFIG_VIRTUALIZATION=y
 CONFIG_KVM=y
-# CONFIG_NVHE_EL2_DEBUG is not set
-# CONFIG_PKVM_SELFTESTS is not set
 # CONFIG_PTDUMP_STAGE2_DEBUGFS is not set
-# CONFIG_PROTECTED_NVHE_TESTING is not set
-# CONFIG_PROTECTED_NVHE_FTRACE is not set
+# CONFIG_PKVM_STACKTRACE is not set
 CONFIG_PKVM_MODULE_PATH=""
+# CONFIG_PKVM_DEBUG is not set
 CONFIG_CPU_MITIGATIONS=y
 
 #
@@ -1020,6 +1018,7 @@ CONFIG_CMA=y
 # CONFIG_CMA_DEBUGFS is not set
 # CONFIG_CMA_SYSFS is not set
 CONFIG_CMA_AREAS=7
+CONFIG_PAGE_BLOCK_ORDER=10
 CONFIG_GENERIC_EARLY_IOREMAP=y
 # CONFIG_DEFERRED_STRUCT_PAGE_INIT is not set
 # CONFIG_IDLE_PAGE_TRACKING is not set
@@ -1737,8 +1736,8 @@ CONFIG_PREVENT_FIRMWARE_BUILD=y
 # Firmware loader
 #
 CONFIG_FW_LOADER=y
-CONFIG_EXTRA_FIRMWARE="regulatory.db regulatory.db.p7s BCM4345C0.hcd BCM4345C5.hcd brcmfmac43455-sdio.bin brcmfmac43455-sdio.clm_blob brcmfmac43455-sdio.txt brcmfmac43456-sdio.bin brcmfmac43456-sdio.clm_blob brcmfmac43456-sdio.txt"
-CONFIG_EXTRA_FIRMWARE_DIR="../../PlatformRPi4-v13/vendor/brcm/proprietary/lib/firmware"
+CONFIG_EXTRA_FIRMWARE="regulatory.db regulatory.db.p7s brcm/BCM4345C0.hcd brcm/BCM4345C5.hcd brcm/brcmfmac43455-sdio.bin brcm/brcmfmac43455-sdio.clm_blob brcm/brcmfmac43455-sdio.txt brcm/brcmfmac43456-sdio.bin brcm/brcmfmac43456-sdio.clm_blob brcm/brcmfmac43456-sdio.txt"
+CONFIG_EXTRA_FIRMWARE_DIR="../vendor/brcm/rpi4/proprietary/vendor/firmware"
 # CONFIG_FW_LOADER_USER_HELPER is not set
 # CONFIG_FW_LOADER_COMPRESS is not set
 # CONFIG_FW_CACHE is not set
@@ -7734,6 +7733,7 @@ CONFIG_HAVE_HARDLOCKUP_DETECTOR_BUDDY=y
 CONFIG_DETECT_HUNG_TASK=y
 CONFIG_DEFAULT_HUNG_TASK_TIMEOUT=120
 # CONFIG_BOOTPARAM_HUNG_TASK_PANIC is not set
+# CONFIG_DETECT_HUNG_TASK_BLOCKER is not set
 # CONFIG_WQ_WATCHDOG is not set
 # CONFIG_WQ_CPU_INTENSIVE_REPORT is not set
 # CONFIG_TEST_LOCKUP is not set
