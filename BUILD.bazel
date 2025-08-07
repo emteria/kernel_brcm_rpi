@@ -1020,7 +1020,7 @@ _RPI_OVERLAY_OUTS = [
     "arch/arm64/boot/dts/overlays/wm8960-soundcard.dtbo",
 ]
 
-_RPI4_MODULE_OUTS = [
+_RPI_MODULE_OUTS = [
     "drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko",
     "drivers/net/wireless/broadcom/brcm80211/brcmfmac/bca/brcmfmac-bca.ko",
     "drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko",
@@ -1160,6 +1160,14 @@ _RPI4_MODULE_OUTS = [
     "sound/soc/codecs/snd-soc-pcm512x.ko",
     "sound/soc/codecs/snd-soc-pcm179x-codec.ko",
     "lib/crypto/libcurve25519-generic.ko",
+    "drivers/i2c/busses/i2c-designware-core.ko",
+    "drivers/i2c/busses/i2c-designware-platform.ko",
+    "sound/soc/dwc/designware_i2s.ko",
+    "drivers/spi/spi-dw-mmio.ko",
+    "drivers/spi/spi-dw-pci.ko",
+    "drivers/i2c/busses/i2c-bcm2835.ko",
+    "drivers/spi/spi-dw.ko",
+    "drivers/hwmon/rp1-adc.ko",
 ]
 
 kernel_build(
@@ -1174,7 +1182,7 @@ kernel_build(
 )
 
 kernel_build(
-    name = "rpi4",
+    name = "rpi",
     outs = _RPI_OVERLAY_OUTS + [
         "arch/arm64/boot/Image.gz",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb",
@@ -1182,6 +1190,9 @@ kernel_build(
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4-io.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4s.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm4io.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm5io.dtb",
     ],
     build_config = "build.config.rpi4",
     make_goals = [
@@ -1189,7 +1200,7 @@ kernel_build(
          "Image.gz",
          "dtbs",
     ],
-    module_outs = _RPI4_MODULE_OUTS,
+    module_outs = _RPI_MODULE_OUTS,
     strip_modules = True,
 )
 
@@ -1201,21 +1212,6 @@ kernel_build(
     build_config = "build.config.rpi5",
     make_goals = [
         "android_rpi5_defconfig",
-    ],
-)
-
-kernel_build(
-    name = "rpi5",
-    outs = _RPI_OVERLAY_OUTS + [
-        "arch/arm64/boot/Image.gz",
-        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dtb",
-        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm4io.dtb",
-        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm5io.dtb",
-    ],
-    build_config = "build.config.rpi5",
-    make_goals = [
-         "Image.gz",
-         "dtbs",
     ],
 )
 
