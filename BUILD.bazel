@@ -1933,25 +1933,31 @@ kernel_build(
     outs = [
         ".config",
     ],
+    arch = "arm64",
     build_config = "build.config.rpi",
     make_goals = [
         "android_rpi_defconfig",
     ],
+    makefile = ":Makefile",
 )
 
 kernel_build(
     name = "rpi",
     outs = _RPI_OVERLAY_OUTS + [
         "arch/arm64/boot/Image.gz",
-        "arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-400.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4-io.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4s.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-500.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2712-rpi-5-b.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm4io.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm5io.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5l-cm4io.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5l-cm5io.dtb",
     ],
+    arch = "arm64",
     build_config = "build.config.rpi",
     defconfig = "arch/arm64/configs/android_rpi_defconfig",
     make_goals = [
@@ -1961,6 +1967,7 @@ kernel_build(
     ],
     module_outs = _RPI_MODULE_OUTS,
     strip_modules = True,
+    makefile = ":Makefile",
 )
 
 # allmodconfig build tests.
