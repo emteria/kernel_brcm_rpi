@@ -1953,6 +1953,7 @@ kernel_build(
         "arch/arm64/boot/dts/broadcom/bcm2712-rpi-cm5-cm5io.dtb",
     ],
     build_config = "build.config.rpi",
+    defconfig = "arch/arm64/configs/android_rpi_defconfig",
     make_goals = [
          "modules",
          "Image.gz",

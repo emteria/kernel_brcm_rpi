@@ -1,8 +1,4 @@
-KERNEL_DIR=common
-. ${ROOT_DIR}/${KERNEL_DIR}/build.config.common
-. ${ROOT_DIR}/${KERNEL_DIR}/build.config.aarch64
+. ${ROOT_DIR}/${KERNEL_DIR}/build.config.constants
 
 BRANCH=
-DEFCONFIG=android_rpi_defconfig
-FILES=
-IN_KERNEL_MODULES=1
+KMI_GENERATION=
