@@ -1927,6 +1927,8 @@ _RPI_MODULE_OUTS = [
     "drivers/i2c/busses/i2c-bcm2835.ko",
     "drivers/spi/spi-dw.ko",
     "drivers/hwmon/rp1-adc.ko",
+    "drivers/bluetooth/btbcm.ko",
+    "drivers/bluetooth/hci_uart.ko",
 ]
 
 kernel_build(
