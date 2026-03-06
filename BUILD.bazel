@@ -1791,6 +1791,7 @@ _RPI_MODULE_OUTS = [
     "net/mpls/mpls_gso.ko",
     "net/ipv4/tcp_westwood.ko",
     "net/ipv4/tcp_bic.ko",
+    "net/wireless/cfg80211.ko",
     "drivers/misc/bcm2835_smi.ko",
     "drivers/char/broadcom/bcm2835_smi_dev.ko",
     "drivers/nvme/host/nvme.ko",
