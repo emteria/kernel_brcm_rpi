@@ -1930,6 +1930,7 @@ _RPI_MODULE_OUTS = [
     "drivers/hwmon/rp1-adc.ko",
     "drivers/bluetooth/btbcm.ko",
     "drivers/bluetooth/hci_uart.ko",
+    "drivers/media/i2c/tc358743.ko",
 ]
 
 kernel_build(
