@@ -1931,6 +1931,9 @@ _RPI_MODULE_OUTS = [
     "drivers/bluetooth/btbcm.ko",
     "drivers/bluetooth/hci_uart.ko",
     "drivers/media/i2c/tc358743.ko",
+    "drivers/vhost/vhost_iotlb.ko",
+    "drivers/vhost/vhost.ko",
+    "drivers/vhost/vhost_vsock.ko",
 ]
 
 kernel_build(
