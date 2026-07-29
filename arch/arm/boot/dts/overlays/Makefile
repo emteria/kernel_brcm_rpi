@@ -329,6 +329,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
 	upstream-pi4.dtbo \
 	vc4-fkms-v3d.dtbo \
 	vc4-fkms-v3d-pi4.dtbo \
+	vc4-kms-DPI-7inch.dtbo \
 	vc4-kms-dpi-generic.dtbo \
 	vc4-kms-dpi-hyperpixel2r.dtbo \
 	vc4-kms-dpi-hyperpixel4.dtbo \
@@ -358,6 +359,7 @@ dtbo-$(CONFIG_ARCH_BCM2835) += \
 	watterott-display.dtbo \
 	waveshare-can-fd-hat-mode-a.dtbo \
 	waveshare-can-fd-hat-mode-b.dtbo \
+	waveshare-7dpi.dtbo \
 	wifimac.dtbo \
 	wittypi.dtbo \
 	wm8960-soundcard.dtbo \
