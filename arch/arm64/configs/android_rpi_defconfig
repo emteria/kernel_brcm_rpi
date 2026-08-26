@@ -6908,7 +6908,7 @@ CONFIG_NVMEM_LAYOUTS=y
 # end of Layout Types
 
 CONFIG_NVMEM_RASPBERRYPI_OTP=y
-# CONFIG_NVMEM_RMEM is not set
+CONFIG_NVMEM_RMEM=y
 
 #
 # HW tracing support
