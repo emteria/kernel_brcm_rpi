@@ -1280,6 +1280,12 @@ static void assign_and_init_hc(dwc_otg_hcd_t * hcd, dwc_otg_qh_t * qh)
 	hc->xfer_len = urb->length - urb->actual_length;
 	hc->xfer_count = 0;
 
+	/* DMA writes whole dwords, so an IN length that is not a multiple of 4 would overrun the URB buffer */
+	if (hcd->core_if->dma_enable && !hcd->core_if->dma_desc_enable &&
+	    hc->ep_is_in && (hc->xfer_len & 0x3)) {
+		ptr = (uint8_t *) urb->buf + urb->actual_length;
+	}
+
 	/*
 	 * Set the split attributes
 	 */
