@@ -1955,6 +1955,9 @@ kernel_build(
     name = "rpi",
     outs = _RPI_OVERLAY_OUTS + [
         "arch/arm64/boot/Image.gz",
+        "arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2710-rpi-3-b-plus.dtb",
+        "arch/arm64/boot/dts/broadcom/bcm2710-rpi-cm3.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-400.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-4-b.dtb",
         "arch/arm64/boot/dts/broadcom/bcm2711-rpi-cm4.dtb",
